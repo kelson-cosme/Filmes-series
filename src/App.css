@@ -1,0 +1,15 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: blue;
+}
+body{
+    background-color: #1e1e1e;
+}
+ a{
+    text-decoration: none;
+    color: red;
+ }
