@@ -4,9 +4,9 @@ import App from './App.jsx'
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
-import Home from './componentes/Pages/Home/Home.jsx'
-import Filmes from './componentes/Pages/Filmes/Filme.jsx'
-import Procurar from './componentes/Pages/Procurar/Procurar.jsx'
+import Home from './componentes/Pages/Home.jsx'
+import Filmes from './componentes/Pages/Filme.jsx'
+import Procurar from './componentes/Pages/Procurar.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
