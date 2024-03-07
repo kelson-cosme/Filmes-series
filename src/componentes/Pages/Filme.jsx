@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import FilmesCard from "../FilmesCard/FilmesCard";
+import "./filmes.css"
 
 const filmesURL = import.meta.env.VITE_API
 const chaveAPI = import.meta.env.VITE_API_KEY
@@ -29,13 +29,37 @@ function Filmes() {
 
     return (
 
-        <div>
+        <>
             {filme && 
-                <h1>{filme.title}</h1>
+                <section className="detalhes">  
+                    <h1>
+                        {filme.title}
+                    </h1>
+
+                    <div className="imgDetalhes">
+                        <img src={imageURL + filme.poster_path} alt="" />
+                    </div>
+               
+                    <div className="info">
+                        <h3>Orçamento: {filme.budget}</h3>
+                    </div>
+
+                    <div className="info">
+                        <h3>Receita: {filme.revenue}</h3>
+                    </div>
+
+                    <div className="info">
+                        <h3>Duração: {filme.runtime} minutos</h3>
+                    </div>
+
+                    <div className="info">
+                        <h3>Descrição: {filme.overview}</h3>
+                    </div>
+                </section>
                 
             }
 
-        </div>
+        </>
     )
   }
   

@@ -1,0 +1,12 @@
+.detalhes{
+    max-width: 70%;
+    margin: auto;
+}
+
+.imgDetalhes{
+    max-width: 50%;
+    margin: auto;
+}
+.imgDetalhes img{
+    width: 100%;
+}
