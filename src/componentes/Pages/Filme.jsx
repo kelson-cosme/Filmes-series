@@ -25,14 +25,38 @@ function Filmes() {
 
         getFilme(filmeURL)
 
-    }, []);
 
+    //API superflix
+    let frame = document.getElementById('SuperFlixAPIContainerVideo');
+    console.log(id)
+    var type = "filme";
+    var imdb = {id};
+    var season = "1";
+    var episode = "1";
+
+    SuperFlixAPIPluginJS(type, imdb, season, episode);
+
+    function SuperFlixAPIPluginJS(type, imdb, season, episode){
+    if (type == "filme") {
+            frame.innerHTML = `<iframe src="https://superflixapi.top/${type}/${id}? scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" "></iframe>`
+
+    }else{
+        if (season !== "") { 
+            season = "/"+season; 
+            }if (episode !== "") { 
+                episode = "/"+episode; 
+            }
+        }
+    }
+    }, []);
+   
     return (
 
         <>
+        
             {filme && 
                 <section className="detalhes">  
-                    <h1>
+                    <h1 className="titleDesc">
                         {filme.title}
                     </h1>
 
@@ -58,6 +82,7 @@ function Filmes() {
                 </section>
                 
             }
+            <div id="SuperFlixAPIContainerVideo"></div>
 
         </>
     )
